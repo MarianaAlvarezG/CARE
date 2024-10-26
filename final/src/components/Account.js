@@ -9,7 +9,7 @@ const Account = () => {
     sessionStorage.setItem('userType', type);
 
     try {
-      const response = await fetch('/auth/account', {
+      const response = await fetch('https://care-1-nyqd.onrender.com/auth/account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const Account = () => {
 
   return (
     <div className="main-container">
-      <img src="../views/images/CARE.png" alt="CARE Logo" className="care-logo" />
+      <img src="final/src/views/images/CARE.png" alt="CARE Logo" className="care-logo" />
       <span className="returning-user">Returning user?</span>
       <button className="rectangle-button" onClick={() => setUserType('admin')}>
         <span className="admin-span">Admin</span>

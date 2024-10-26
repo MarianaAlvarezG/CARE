@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Account.css';
-import careLogo from './views/images/CARE.png';
+import careLogo from '../views/images/CARE.png';
 
 
 const Account = () => {

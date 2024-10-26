@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://care-l90v.onrender.com/', 
+  origin: 'https://care-1-nyqd.onrender.com/', 
   credentials: true, 
 }));
 

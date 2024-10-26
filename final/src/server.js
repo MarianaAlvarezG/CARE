@@ -7,7 +7,7 @@ const authRoutes = require('./auth.js');
 const cors = require('cors');
 
 const app = express();
-const PORT = 14000; // Use fixed port
+const PORT = process.env.PORT || 14000; // Use environment variable or default to 14000
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

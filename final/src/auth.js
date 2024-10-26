@@ -39,7 +39,7 @@ const upload = multer({ storage: storage });
 
 //POST REQUESTS------------------------
 
-router.post('/auth/account', async (req, res) => {
+router.post('/account', async (req, res) => {
   
   const { userType } = req.body;
   console.log('Selected user type: %s', userType);
@@ -70,7 +70,7 @@ router.post('/auth/account', async (req, res) => {
 });
 
 
-router.post('/auth/register', upload.single('idfile'), async (req, res) => {
+router.post('/register', upload.single('idfile'), async (req, res) => {
   const { fullname, idnumber, email, password, phone } = req.body;
   
   const idfile = req.file ? req.file.path : null; 
@@ -111,7 +111,7 @@ router.post('/auth/register', upload.single('idfile'), async (req, res) => {
 });
 
 
-router.post('/auth/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   const query = 'SELECT * FROM users WHERE email = ?';
@@ -145,17 +145,17 @@ router.post('/auth/login', async (req, res) => {
 });
 
 
-router.post('/auth/dashboard/user', isAuthenticated, (req, res) => {
+router.post('/dashboard/user', isAuthenticated, (req, res) => {
   
   return res.status(200).json({ success: true });
 });
 
-router.post('/auth/dashboard/admin', isAuthenticated, (req, res) => {
+router.post('/dashboard/admin', isAuthenticated, (req, res) => {
  
   return res.status(200).json({ success: true });
 });
 
-router.post('/auth/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
       return res.status(500).json({ error: 'Error logging out' });

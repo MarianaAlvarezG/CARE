@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Account.css';
+import careLogo from './views/images/CARE.png';
+
 
 const Account = () => {
   const navigate = useNavigate();
@@ -35,7 +37,7 @@ const Account = () => {
 
   return (
     <div className="main-container">
-      <img src="final/src/views/images/CARE.png" alt="CARE Logo" className="care-logo" />
+  <img src={careLogo} alt="CARE Logo" className="care-logo" />
       <span className="returning-user">Returning user?</span>
       <button className="rectangle-button" onClick={() => setUserType('admin')}>
         <span className="admin-span">Admin</span>

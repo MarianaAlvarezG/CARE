@@ -11,7 +11,7 @@ const Account = () => {
     sessionStorage.setItem('userType', type);
 
     try {
-      const response = await fetch('/auth/account', {
+      const response = await fetch('/account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

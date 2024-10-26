@@ -5,7 +5,7 @@ const MySQLStore = require('express-mysql-session')(session);
 const client = require('./db.js');
 const authRoutes = require('./auth.js');
 const app = express();
-const PORT = 14000;
+const PORT = 10000;
 const cors = require('cors');
 
 app.use(express.urlencoded({ extended: true }));

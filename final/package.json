@@ -29,7 +29,7 @@
     "test":  "react-app-rewired test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://care-l90v.onrender.com/",
+  "proxy": "https://care-1-nyqd.onrender.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(cors({
-  origin: 'http://localhost:14000', 
+  origin: 'https://care-l90v.onrender.com/', 
   credentials: true, 
 }));
 

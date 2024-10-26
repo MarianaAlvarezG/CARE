@@ -9,7 +9,7 @@ const Account = () => {
     sessionStorage.setItem('userType', type);
 
     try {
-      const response = await fetch('https://care-1-nyqd.onrender.com/auth/account', {
+      const response = await fetch('/auth/account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

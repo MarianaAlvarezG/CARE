@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Registration.css';
+import careLogo from '../views/images/CARE.png';
+
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -50,7 +52,7 @@ const Registration = () => {
 
   return (
     <div className="container">
-      <img src="../views/images/CARE.png" alt="Care logo" className="top-left-img" />
+      <img src={careLogo} alt="CARE Logo" className="top-left-img" />
       <div className="heading">Welcome Onboard!</div>
       <form onSubmit={handleSubmit} id="registration-form">
         <div className="column-left">
